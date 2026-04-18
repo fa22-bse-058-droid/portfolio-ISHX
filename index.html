@@ -13,14 +13,26 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-header glass-card">
+    <header class="site-header">
       <div class="container nav-wrap">
-        <a href="#home" class="logo">Ishna</a>
-        <nav>
+        <a href="#home" class="logo">Ishna.</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="primary-nav" class="site-nav">
           <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#fyp">FYP</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -29,22 +41,43 @@
 
     <main>
       <section id="home" class="section hero">
-        <div class="blob blob-large"></div>
-        <div class="container content-layer">
-          <div class="hero-card glass-card">
-            <p class="eyebrow">Software Engineering Student</p>
-            <h1>Hi, I’m Ishna.</h1>
-            <p>
-              I build thoughtful digital experiences, blending clean code with
-              user-centered design.
+        <div class="hero-blob hero-blob-large"></div>
+        <div class="hero-blob hero-blob-small"></div>
+        <div class="container hero-layout">
+          <div class="hero-content">
+            <p class="hero-tag">BSE Software Engineering 2022–2026</p>
+            <h1>Hi, I'm Ishna</h1>
+            <p class="hero-subtitle">
+              <span id="typewriter-text"></span><span class="cursor">|</span>
             </p>
-            <a href="#projects" class="cta">View Projects</a>
+            <p class="hero-bio">
+              I build scalable AI-powered web applications with clean, animated
+              frontends and intelligent backends. Currently finishing my final
+              year at COMSATS University Islamabad, Sahiwal Campus.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a
+                href="https://github.com/fa22-bse-058-droid"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+                >GitHub</a
+              >
+            </div>
           </div>
+          <aside class="hero-status-card glass-card" aria-label="Current status">
+            <p class="status-title">Status</p>
+            <ul>
+              <li>Available for job</li>
+              <li>Currently building: AI Career Platform</li>
+              <li>Sahiwal, Pakistan</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
       <section id="about" class="section about">
-        <div class="blob blob-large"></div>
         <div class="container content-layer">
           <div class="glass-card section-card">
             <h2>About Me</h2>
@@ -58,8 +91,19 @@
         </div>
       </section>
 
+      <section id="skills" class="section skills">
+        <div class="container content-layer">
+          <div class="glass-card section-card">
+            <h2>Skills</h2>
+            <p>
+              FastAPI, React, Python, JavaScript, REST APIs, and modern UI/UX
+              frontend development.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" class="section projects">
-        <div class="blob blob-small"></div>
         <div class="container content-layer">
           <h2>Featured Projects</h2>
           <div class="project-grid">
@@ -84,6 +128,18 @@
                 project views.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="fyp" class="section fyp">
+        <div class="container content-layer">
+          <div class="glass-card section-card">
+            <h2>FYP</h2>
+            <p>
+              Exploring intelligent systems and practical AI integration for
+              real-world product experiences.
+            </p>
           </div>
         </div>
       </section>
