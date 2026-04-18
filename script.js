@@ -47,6 +47,10 @@ const subtitles = [
   "FastAPI + React Full-Stack Developer",
   "Building Intelligent, Interactive Products",
 ];
+const TYPING_DELAY = 80;
+const DELETING_DELAY = 45;
+const PAUSE_DELAY = 1600;
+const PHRASE_CHANGE_DELAY = 380;
 
 if (typewriterText) {
   let phraseIndex = 0;
@@ -62,15 +66,15 @@ if (typewriterText) {
     typewriterText.textContent = nextChars;
     charIndex = nextChars.length;
 
-    let delay = deleting ? 45 : 80;
+    let delay = deleting ? DELETING_DELAY : TYPING_DELAY;
 
     if (!deleting && charIndex === current.length) {
       deleting = true;
-      delay = 1600;
+      delay = PAUSE_DELAY;
     } else if (deleting && charIndex === 0) {
       deleting = false;
       phraseIndex = (phraseIndex + 1) % subtitles.length;
-      delay = 380;
+      delay = PHRASE_CHANGE_DELAY;
     }
 
     window.setTimeout(tick, delay);
