@@ -170,10 +170,24 @@ if (typewriterText) {
 
 if (customCursor && !prefersReducedMotion) {
   document.body.classList.add("custom-cursor-enabled");
+  let cursorX = 0;
+  let cursorY = 0;
+  let frameRequested = false;
 
   window.addEventListener("mousemove", (event) => {
-    customCursor.style.left = `${event.clientX}px`;
-    customCursor.style.top = `${event.clientY}px`;
+    cursorX = event.clientX;
+    cursorY = event.clientY;
+
+    if (frameRequested) {
+      return;
+    }
+
+    frameRequested = true;
+    window.requestAnimationFrame(() => {
+      customCursor.style.left = `${cursorX}px`;
+      customCursor.style.top = `${cursorY}px`;
+      frameRequested = false;
+    });
   });
 
   document.addEventListener("mouseleave", () => {
