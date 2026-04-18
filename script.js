@@ -169,6 +169,8 @@ if (typewriterText) {
 }
 
 if (customCursor && !prefersReducedMotion) {
+  document.body.classList.add("custom-cursor-enabled");
+
   window.addEventListener("mousemove", (event) => {
     customCursor.style.left = `${event.clientX}px`;
     customCursor.style.top = `${event.clientY}px`;

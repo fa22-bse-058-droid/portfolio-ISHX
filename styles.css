@@ -520,7 +520,7 @@ h3 {
   letter-spacing: 0.03em;
   background: rgba(34, 197, 94, 0.2);
   border: 1px solid rgba(34, 197, 94, 0.35);
-  color: #155f34;
+  color: #0f4d2a;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -1270,13 +1270,13 @@ h2 {
 }
 
 @media (pointer: fine) {
-  body,
-  a,
-  button {
+  body.custom-cursor-enabled,
+  body.custom-cursor-enabled a,
+  body.custom-cursor-enabled button {
     cursor: none;
   }
 
-  .custom-cursor {
+  body.custom-cursor-enabled .custom-cursor {
     opacity: 1;
   }
 }
