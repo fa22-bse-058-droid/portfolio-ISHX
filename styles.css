@@ -1058,8 +1058,9 @@ skill-icon-box svg rect {
 
 .in-progress-badge {
   margin: 0;
-  padding: 0.32rem 0.8rem;
-  min-width: 132px;
+  padding: 0 0.9rem;
+  min-width: 140px;
+  height: 32px;
   border-radius: 999px;
   background: rgba(232, 117, 74, 0.18);
   border: 1px solid rgba(232, 117, 74, 0.45);
