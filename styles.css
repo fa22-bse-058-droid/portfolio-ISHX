@@ -1045,6 +1045,17 @@ skill-icon-box svg rect {
   text-align: center;
 }
 
+/* ── FYP Bottom Actions Row ──────────────────────────────────────────── */
+.fyp-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
 .fyp-link {
   text-decoration: none;
 }
@@ -1083,6 +1094,7 @@ skill-icon-box svg rect {
   gap: 1.8rem;
   align-items: center;
   max-width: 600px;
+  width: 100%;
 }
 
 .contact-email-label {
@@ -1092,10 +1104,16 @@ skill-icon-box svg rect {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-secondary);
+  text-align: center;
+  width: 100%;
 }
 
 .contact-email {
   margin: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .email-pill {
@@ -1334,6 +1352,11 @@ skill-icon-box svg rect {
   .fyp-bottom {
     align-items: flex-start;
   }
+
+  .fyp-bottom-actions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1362,6 +1385,11 @@ skill-icon-box svg rect {
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
+  }
+
+  .fyp-bottom-actions {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
